@@ -19,6 +19,7 @@ run:
 
 zip: build	
 	zip ${OUTFILE}-linux-$(shell arch)-${VERSION}.zip ${OUTFILE}
+	rm -f ${OUTFILE}
 
 zipcross: cross
 	zip ${OUTFILE}-win64-${VERSION}.zip ${OUTFILE}.exe
