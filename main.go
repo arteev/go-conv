@@ -25,7 +25,7 @@ func main() {
 	var r io.Reader
 	if fi.Mode()&os.ModeNamedPipe == 0 {
 		if len(os.Args) > 1 {
-			f, err := os.Open(os.Args[1])
+			f, err := os.OpenFile(os.Args[1], os.O_RDONLY, 0)
 			if err != nil {
 				log.Fatal(err)
 			}
