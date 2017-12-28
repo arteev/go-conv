@@ -1,2 +1,7 @@
 # go-conv
-Stdin convert from UFT-8 to Win1251
+
+Use in windows for converting files utf8-> win1251 without libiconv
+
+```
+cat uft8.txt | conv > win1251.txt
+```
