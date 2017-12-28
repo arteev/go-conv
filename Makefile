@@ -18,7 +18,7 @@ run:
 	go run main.go
 
 zip: build	
-	zip ${OUTFILE}-linux-$(shell arch)-${VERSION}.zip dsql
+	zip ${OUTFILE}-linux-$(shell arch)-${VERSION}.zip ${OUTFILE}
 
 zipcross: cross
 	zip ${OUTFILE}-win64-${VERSION}.zip ${OUTFILE}.exe
